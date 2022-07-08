@@ -1,18 +1,19 @@
 {
-  "name": "bds",
+  "name": "com.mishraDileep.bds",
+  "displayName": "bds",
   "version": "1.0.0",
-  "description": "Bageswar Dhaam Sarkar webapp",
+  "description": "Bageswar dhaam sarkar mobile app.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
-    "First",
-    "webapp"
+    "ecosystem:cordova"
   ],
   "author": "@mishraDileep",
-  "license": "ISC",
+  "license": "Apache-2.0",
   "devDependencies": {
+    "cordova-ios": "^6.2.0",
     "@fortawesome/fontawesome-free": "^6.1.1",
     "browser-sync": "^2.27.10",
     "gulp": "^4.0.2",
@@ -23,5 +24,10 @@
     "bootstrap": "^5.1.3",
     "gulp-copy": "^4.0.1",
     "jquery": "^3.6.0"
+  },
+  "cordova": {
+    "platforms": [
+      "ios"
+    ]
   }
 }
