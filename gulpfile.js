@@ -14,16 +14,22 @@ gulp.task('sass', function() {
         .pipe(browserSync.stream());
 });
 
-// Fornawesome fonts
+// jQuery
 gulp.task('fa', function() {
   return gulp.src('./node_modules/jquery/dist/jquery.min.js')
     .pipe(gulp.dest('./app/assets/js/'));
 });
 
-// jQuery
+// Fornawesome fonts
 gulp.task('jq', function() {
   return gulp.src('./node_modules/@fortawesome/fontawesome-free/webfonts/**.*')
     .pipe(gulp.dest('./app/assets/webfonts/fa/'));
+});
+
+// JavaScript
+gulp.task('js', function() {
+  return gulp.src('./js/**.*')
+    .pipe(gulp.dest('./app/assets/js/'));
 });
 
 // Images
@@ -33,7 +39,7 @@ gulp.task('images', function() {
 });
 
 // Static Server + watching scss/html files
-gulp.task('serve', gulp.series(['sass', 'fa', 'images', 'jq'], function() {
+gulp.task('serve', gulp.series(['sass', 'fa', 'images', 'jq', 'js'], function() {
 
     browserSync.init({
         server: "./app/"

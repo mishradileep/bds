@@ -1,5 +1,6 @@
 # Ignore NPM modules
 node_modules
+package-lock.json
 
 # Macbook
 **/.DS_Store
